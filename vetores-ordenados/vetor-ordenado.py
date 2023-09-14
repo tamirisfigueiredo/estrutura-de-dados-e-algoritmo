@@ -13,3 +13,25 @@ class VetorOrdenado:
         else:
             for i in range(self.ultima_posicao + 1):
                 print(i, '-', self.valores[i])
+
+    # O(n)
+    def inserir(self, valor):
+        if self.ultima_posicao == self.capacidade - 1:
+            print('capacidade máxima atingida')
+            return
+        
+        posicao = 0
+        for i in range(self.ultima_posicao + 1):
+            posicao = i
+            if self.valores[i] > valor:
+                break
+            if i == self.ultima_posicao:
+                posicao = i + 1
+        
+        x = self.ultima_posicao
+        while x >= posicao:
+            self.valores[x + 1] = self.valores[x]
+            x -= 1
+        
+        self.valores[posicao] = valor
+        self.ultima_posicao += 1
