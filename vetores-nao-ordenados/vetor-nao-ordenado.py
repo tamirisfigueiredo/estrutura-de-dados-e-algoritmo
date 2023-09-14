@@ -13,3 +13,11 @@ class VetorNaoOrdenado:
         else:
             for i in range(self.ultima_posicao + 1):
                 print(i, '-', self.valores[i])
+    
+    # O(1) - O(2)
+    def inserir(self, valor):
+        if self.ultima_posicao == self.capacidade - 1:
+            print('Capacidade máxima atingida')
+        else:
+            self.ultima_posicao += 1
+            self.valores[self.ultima_posicao] = valor
