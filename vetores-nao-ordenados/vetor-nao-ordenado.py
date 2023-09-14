@@ -21,3 +21,10 @@ class VetorNaoOrdenado:
         else:
             self.ultima_posicao += 1
             self.valores[self.ultima_posicao] = valor
+    
+    # O(n)
+    def pesquisar(self, valor):
+        for i in range(self.ultima_posicao + 1):
+            if valor == self.valores[i]:
+                return i
+        return -1
