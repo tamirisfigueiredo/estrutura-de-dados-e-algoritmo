@@ -28,3 +28,14 @@ class VetorNaoOrdenado:
             if valor == self.valores[i]:
                 return i
         return -1
+
+    # O(n)
+    def excluir(self, valor):
+        posicao = self.pesquisar(valor)
+        if posicao == -1:
+            return -1
+        else:
+            for i in range(posicao, self.ultima_posicao):
+                self.valores[i] = self.valores[i + 1]
+            
+            self.ultima_posicao -= 1
