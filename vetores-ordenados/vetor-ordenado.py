@@ -35,3 +35,13 @@ class VetorOrdenado:
         
         self.valores[posicao] = valor
         self.ultima_posicao += 1
+
+    # O(n)
+    def pesquisar(self, valor):
+        for i in range(self.ultima_posicao + 1):
+            if self.valores[i] > valor:
+                return -1
+            if self.valores[i] == valor:
+                return i
+            if i == self.ultima_posicao:
+                return -1
