@@ -30,4 +30,9 @@ class Pilha:
             print('A pilha está vazia')
         else:
             self.__topo -= 1
-    
+
+    def ver_topo(self):
+        if self.__topo != -1:
+            return self.__valores[self.__topo]
+        else:
+            return -1
