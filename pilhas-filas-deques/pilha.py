@@ -17,3 +17,11 @@ class Pilha:
             return True
         else:
             return False
+
+    def empilhar(self, valor):
+        if self.__pilha_cheia():
+            print('A pilha está cheia')
+        else:
+            self.__topo += 1
+            self.__valores[self.__topo] = valor
+    
