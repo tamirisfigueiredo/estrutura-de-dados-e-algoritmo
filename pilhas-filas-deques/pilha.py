@@ -6,4 +6,10 @@ class Pilha:
         self.__topo = -1
         self.__valores = np.empty(self.__capacidade, dtype=int)
     
+    def __pilha_cheia(self):
+        if self.__topo == self.__capacidade - 1:
+            return True
+        else:
+            return False
+    
     
