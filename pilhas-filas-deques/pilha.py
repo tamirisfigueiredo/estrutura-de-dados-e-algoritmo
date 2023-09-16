@@ -25,3 +25,9 @@ class Pilha:
             self.__topo += 1
             self.__valores[self.__topo] = valor
     
+    def desempilhar(self):
+        if self.__pilha_vazia():
+            print('A pilha está vazia')
+        else:
+            self.__topo -= 1
+    
