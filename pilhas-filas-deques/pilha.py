@@ -12,4 +12,8 @@ class Pilha:
         else:
             return False
     
-    
+    def __pilha_vazia(self):
+        if self.__topo == -1:
+            return True
+        else:
+            return False
