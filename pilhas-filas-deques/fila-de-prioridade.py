@@ -5,3 +5,6 @@ class FilaPrioridade:
         self.capacidade = capacidade
         self.numero_elementos = 0
         self.valores = np.empty(self.capacidade, dtype=int)
+
+    def __fila_vazia(self):
+        return self.numero_elementos == 0
