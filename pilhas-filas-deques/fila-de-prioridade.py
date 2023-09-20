@@ -8,3 +8,6 @@ class FilaPrioridade:
 
     def __fila_vazia(self):
         return self.numero_elementos == 0
+
+    def __fila_cheia(self):
+        return self.numero_elementos == self.capacidade
