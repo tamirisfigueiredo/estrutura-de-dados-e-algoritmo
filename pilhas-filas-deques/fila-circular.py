@@ -35,3 +35,8 @@ class FilaCircular:
             self.inicio = 0
         self.numero_elementos -= 1
         return temp
+
+    def primeiro(self):
+        if self.__fila_vazia():
+            return -1
+        return self.valores[self.inicio]
