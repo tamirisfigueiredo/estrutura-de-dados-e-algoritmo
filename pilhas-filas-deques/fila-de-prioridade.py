@@ -30,3 +30,12 @@ class FilaPrioridade:
                 x -= 1
             self.valores[x + 1] = valor
             self.numero_elementos += 1
+
+    def desenfileirar(self):
+        if self.__fila_vazia():
+            print('A fila está vazia')
+            return
+        
+        valor = self.valores[self.nuemro_elemtos - 1]
+        self.numero_elementos -= 1
+        return valor
