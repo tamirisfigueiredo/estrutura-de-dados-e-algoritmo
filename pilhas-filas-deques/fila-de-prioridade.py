@@ -39,3 +39,8 @@ class FilaPrioridade:
         valor = self.valores[self.nuemro_elemtos - 1]
         self.numero_elementos -= 1
         return valor
+
+    def primeiro(self):
+        if self.__fila_vazia():
+            return -1
+        return self.valores[self.numero_elementos - 1]
