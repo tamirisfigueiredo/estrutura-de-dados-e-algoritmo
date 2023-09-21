@@ -36,7 +36,7 @@ class FilaPrioridade:
             print('A fila está vazia')
             return
         
-        valor = self.valores[self.nuemro_elemtos - 1]
+        valor = self.valores[self.numero_elementos - 1]
         self.numero_elementos -= 1
         return valor
 
